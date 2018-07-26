@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteAboutGazells.Server", "WebsiteAboutGazells.Server\WebsiteAboutGazells.Server.csproj", "{FC0FE75B-C5DD-463E-A05D-F49AC804F025}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteAboutGazells.Client", "WebsiteAboutGazells.Client\WebsiteAboutGazells.Client.csproj", "{437C0203-38AE-4770-94A6-56BC376500CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteAboutGazells.Shared", "WebsiteAboutGazells.Shared\WebsiteAboutGazells.Shared.csproj", "{B14424A0-882B-46B3-B632-50FB3D2DC8FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC0FE75B-C5DD-463E-A05D-F49AC804F025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0FE75B-C5DD-463E-A05D-F49AC804F025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC0FE75B-C5DD-463E-A05D-F49AC804F025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0FE75B-C5DD-463E-A05D-F49AC804F025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{437C0203-38AE-4770-94A6-56BC376500CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{437C0203-38AE-4770-94A6-56BC376500CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{437C0203-38AE-4770-94A6-56BC376500CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{437C0203-38AE-4770-94A6-56BC376500CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B14424A0-882B-46B3-B632-50FB3D2DC8FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B14424A0-882B-46B3-B632-50FB3D2DC8FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B14424A0-882B-46B3-B632-50FB3D2DC8FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B14424A0-882B-46B3-B632-50FB3D2DC8FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B1F774B-7F57-4D77-B4F9-F40588CE676B}
+	EndGlobalSection
+EndGlobal
