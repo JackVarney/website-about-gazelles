@@ -1,7 +1,32 @@
-﻿@page "/"
+﻿@using WebsiteAboutGazells.Shared.Models;
+@using System.Linq
+@page "/"
+@inject HttpClient Http
+@inject Microsoft.AspNetCore.Blazor.Services.IUriHelper UriHelper
 
-<h1>Hello, world!</h1>
+<h1>This is a website about Gazelles</h1>
 
-Welcome to your new app.
+<p>Click learn more to learn more about your chosen Gazelle.</p>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@if (gazelles != null)
+{
+    <ul>
+        @foreach (var item in new List<Gazelle>(gazelles).Select((gazelle, index) => new { index, gazelle }))
+        {
+            <li>
+                <span>@item.gazelle.Name</span>
+                <NavLink class="nav-link" href="@String.Format("gazelles/{0}", item.index)">learn more</NavLink>
+            </li>
+        }
+    </ul>
+}
+
+@functions {
+Gazelle[] gazelles;
+
+protected override async Task OnInitAsync()
+{
+    gazelles = await Http.GetJsonAsync<Gazelle[]>("api/gazelles");
+}
+}
+

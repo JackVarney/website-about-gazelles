@@ -1,0 +1,10 @@
+﻿@page "/gazelles"
+@page "/gazelles/{gazelle}"
+@using WebsiteAboutGazells.Shared.Models;
+
+<span>Gazelle number @Gazelle.Name</span>
+
+@functions {
+    [Parameter]
+    private Gazelle Gazelle{ get; set; } = 0;
+}
