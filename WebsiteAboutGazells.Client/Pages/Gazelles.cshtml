@@ -1,10 +1,10 @@
 ﻿@page "/gazelles"
-@page "/gazelles/{gazelle}"
+@page "/gazelles/{id}"
 @using WebsiteAboutGazells.Shared.Models;
 
-<span>Gazelle number @Gazelle.Name</span>
+<span>Gazelle number @Id</span>
 
 @functions {
     [Parameter]
-    private Gazelle Gazelle{ get; set; } = 0;
+    private int Id{ get; set; } = 0;
 }

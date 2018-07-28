@@ -1,17 +1,18 @@
-﻿@using WebsiteAboutGazells.Shared.Models;
+﻿@page "/"
+@using WebsiteAboutGazells.Shared.Models;
 @using System.Linq
-@page "/"
-@inject HttpClient Http
-@inject Microsoft.AspNetCore.Blazor.Services.IUriHelper UriHelper
+@using WebsiteAboutGazells.Client.Shared.Store;
+@inherits BaseComponent;
+@inject HttpClient http
 
 <h1>This is a website about Gazelles</h1>
 
 <p>Click learn more to learn more about your chosen Gazelle.</p>
 
-@if (gazelles != null)
+@*@if (@State.Gazelles != null)
 {
     <ul>
-        @foreach (var item in new List<Gazelle>(gazelles).Select((gazelle, index) => new { index, gazelle }))
+        @foreach (var item in new List<Gazelle>(State.Gazelles).Select((gazelle, index) => new { index, gazelle }))
         {
             <li>
                 <span>@item.gazelle.Name</span>
@@ -19,14 +20,12 @@
             </li>
         }
     </ul>
-}
+}*@
 
 @functions {
-Gazelle[] gazelles;
-
-protected override async Task OnInitAsync()
-{
-    gazelles = await Http.GetJsonAsync<Gazelle[]>("api/gazelles");
-}
+    protected override async Task OnInitAsync()
+    {
+        await ActionCreators.LoadGazelles(Store.Dispatch, http);
+    }
 }
 
